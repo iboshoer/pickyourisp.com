@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 80" fill="none">
+  <rect width="200" height="80" fill="white"/>
+  <rect x="15" y="25" width="35" height="30" rx="4" fill="#ED1C24"/>
+  <path d="M25 35 L25 45 M25 35 L40 35 M25 40 L35 40" stroke="white" stroke-width="3" stroke-linecap="round"/>
+  <text x="60" y="52" font-family="Arial, sans-serif" font-size="26" font-weight="bold" fill="#000000">Frontier</text>
+</svg>

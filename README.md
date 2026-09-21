@@ -48,6 +48,8 @@ Folder `index.html` routing gives clean paths under `python3 -m http.server`.
 
 Shared assets: `css/styles.css`, `js/availability.js` (honest empty stub), `js/compare.js` (retired stub).
 
+Visual assets: `/assets/images/providers/` (provider logos for identification), `/assets/images/hero/` (hero illustration).
+
 ## Nav (every page)
 
 **Primary:** Check availability (`/#availability`) · Providers · Internet · Compare · About  
@@ -66,6 +68,21 @@ Preview banner on all pages.
 - Provider pages are PLACEHOLDER; Xfinity is the fuller template; others are thin stubs with official-site links from PYI-014
 - Los Angeles city page is scaffold only: meta robots noindex + do-not-publish banner; excluded from sitemap Allow and listed in robots Disallow
 - Speeds, prices, coverage, reviews marked PLACEHOLDER / EXAMPLE / UNKNOWN
+
+## Visual Enhancements (PYI-017)
+
+Enterprise-grade visual improvements to match peer ISP comparison sites:
+
+- [x] Provider logos on homepage (logo strip below hero)
+- [x] Provider logos in directory table (`/providers/`)
+- [x] Provider logos on all 14 individual provider pages
+- [x] Hero illustration for homepage (`connectivity-hero.svg`)
+- [x] Trust validation section on homepage (honest, no fake press)
+- [x] ATTRIBUTION.md documenting logo sources and nominative fair use
+- [x] All assets hosted locally in `/assets/images/`
+- [x] noindex,nofollow preserved on all pages
+- [x] No fake press claims or invented data
+- [x] CSS enhancements for logo tiles, validation cards, and responsive layouts
 
 ## Acceptance (PYI-016)
 

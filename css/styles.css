@@ -1145,6 +1145,212 @@ button:focus-visible {
   font-weight: 600;
 }
 
+.provider-table .logo-cell {
+  width: 120px;
+  padding: 0.75rem;
+}
+
+.provider-table .logo-cell img {
+  max-width: 90px;
+  height: auto;
+  max-height: 36px;
+  width: auto;
+  display: block;
+}
+
+.provider-logos {
+  margin: 3rem 0 0;
+  padding: 2.5rem 0 0;
+  border-top: 1px solid var(--border-light);
+}
+
+.provider-logos h3 {
+  text-align: center;
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--muted-light);
+  font-weight: 700;
+  margin: 0 0 1.75rem;
+}
+
+.logo-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 1rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.logo-tile {
+  background: var(--surface);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius);
+  padding: 1.25rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: var(--transition);
+  min-height: 70px;
+}
+
+.logo-tile:hover {
+  border-color: var(--border);
+  box-shadow: var(--shadow-sm);
+  transform: translateY(-2px);
+}
+
+.logo-tile img {
+  max-width: 100%;
+  height: auto;
+  max-height: 48px;
+  width: auto;
+  filter: grayscale(40%);
+  opacity: 0.85;
+  transition: var(--transition);
+}
+
+.logo-tile:hover img {
+  filter: grayscale(0%);
+  opacity: 1;
+}
+
+.trust-validation {
+  background: linear-gradient(180deg, var(--bg) 0%, var(--surface) 100%);
+  border-top: 1px solid var(--border-light);
+  border-bottom: 1px solid var(--border-light);
+  padding: 3rem 0;
+  margin: 3rem 0;
+}
+
+.validation-grid {
+  display: grid;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+@media (min-width: 640px) {
+  .validation-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 900px) {
+  .validation-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.validation-item {
+  background: var(--surface);
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 1.75rem 1.5rem;
+  text-align: center;
+  transition: var(--transition);
+  position: relative;
+  overflow: hidden;
+}
+
+.validation-item::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--brand) 0%, var(--accent) 100%);
+  transform: scaleX(0);
+  transition: var(--transition);
+}
+
+.validation-item:hover::before {
+  transform: scaleX(1);
+}
+
+.validation-item:hover {
+  border-color: var(--brand-light);
+  box-shadow: var(--shadow-md);
+  transform: translateY(-4px);
+}
+
+.validation-icon {
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--brand-light) 0%, var(--accent-light) 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1rem;
+  font-size: 1.5rem;
+}
+
+.validation-item h4 {
+  margin: 0 0 0.5rem;
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--ink);
+}
+
+.validation-item p {
+  margin: 0;
+  font-size: 0.875rem;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.validation-item a {
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+.hero-image-container {
+  position: relative;
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.hero-image-container img {
+  width: 100%;
+  height: auto;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+}
+
+.provider-header {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.provider-logo-badge {
+  background: var(--surface);
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius);
+  padding: 0.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 100px;
+  box-shadow: var(--shadow-sm);
+}
+
+.provider-logo-badge img {
+  max-width: 100%;
+  height: auto;
+  max-height: 48px;
+  width: auto;
+}
+
+@media (min-width: 900px) {
+  .hero-image-container {
+    max-width: 100%;
+  }
+}
+
 @media (max-width: 560px) {
   .preview-banner {
     font-size: 0.75rem;
@@ -1190,5 +1396,15 @@ button:focus-visible {
 
   .cta-band h2 {
     font-size: 1.5rem;
+  }
+  
+  .logo-grid {
+    grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+    gap: 0.75rem;
+  }
+  
+  .provider-header {
+    flex-direction: column;
+    align-items: flex-start;
   }
 }
