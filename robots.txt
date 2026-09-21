@@ -1,0 +1,15 @@
+# PickYourISP static preview (PYI-015)
+User-agent: *
+Allow: /
+Allow: /providers/
+Allow: /disclosure/
+Allow: /methodology/
+Allow: /privacy/
+Allow: /terms/
+Allow: /about/
+Allow: /compare/
+Allow: /contact/
+Disallow: /go/
+Disallow: /locations/ca/los-angeles/
+
+Sitemap: https://www.pickyourisp.com/sitemap.xml

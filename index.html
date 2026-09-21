@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PickYourISP · Find internet options for your address</title>
+  <meta name="description" content="US comparison and availability hub. Preview only: live matching not connected. No invented coverage.">
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <div class="preview-banner" role="status">
+    Preview / PLACEHOLDER data
+    <span> · Not live inventory, pricing, or coverage. Example UI only.</span>
+  </div>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="logo" href="/" aria-label="PickYourISP home">
+        <span class="logo-mark" aria-hidden="true">PY</span>
+        PickYourISP
+      </a>
+      <nav class="nav" aria-label="Primary">
+        <a href="/#availability" aria-current="page" data-cta-id="check_availability" data-cta-location="nav">Check availability</a>
+        <a href="/providers/">Providers</a>
+        <a href="/internet/">Internet</a>
+        <a href="/compare/">Compare</a>
+        <a href="/about/">About</a>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <section class="hero" id="availability">
+      <div class="section-inner hero-grid">
+        <div>
+          <span class="eyebrow">Static preview · US only (v1)</span>
+          <h1>Find internet options for your address</h1>
+          <p class="hero-lead">
+            PickYourISP is a US comparison and availability hub. We are <strong>not</strong> an internet service provider.
+            Enter a ZIP to try the availability tool. Live provider matching is not connected in this preview.
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#availability-tool" data-cta-id="check_availability" data-cta-location="hero">Check availability</a>
+            <a class="btn btn-secondary" href="#how-it-works" data-cta-id="how_it_works" data-cta-location="hero">How it works</a>
+          </div>
+          <p class="hero-note">No account required. No purchases. No live lead capture.</p>
+
+          <div class="trust-row" aria-label="Trust cues">
+            <div class="trust-item">
+              <span class="trust-icon" aria-hidden="true">1</span>
+              <div>
+                <strong>Not a carrier</strong>
+                <span>We do not sell or install internet service.</span>
+              </div>
+            </div>
+            <div class="trust-item">
+              <span class="trust-icon" aria-hidden="true">2</span>
+              <div>
+                <strong>Honest empty states</strong>
+                <span>No invented providers, prices, or coverage for your ZIP.</span>
+              </div>
+            </div>
+            <div class="trust-item">
+              <span class="trust-icon" aria-hidden="true">3</span>
+              <div>
+                <strong>Capture OFF</strong>
+                <span>This preview does not collect personal information.</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <aside class="hero-card" id="availability-tool" aria-labelledby="avail-heading">
+          <h2 id="avail-heading">Check availability</h2>
+          <p>ZIP is a form input only (not a URL path). Submit to see the honest preview stub. No live coverage lookup.</p>
+          <form class="zip-row" id="availability-form" action="#" method="get" role="search">
+            <label class="sr-only" for="avail-zip">ZIP code</label>
+            <input
+              id="avail-zip"
+              name="zip"
+              type="text"
+              inputmode="numeric"
+              pattern="\d{5}"
+              maxlength="5"
+              placeholder="5-digit ZIP"
+              autocomplete="postal-code"
+            >
+            <button class="btn btn-primary" type="submit">Check availability</button>
+          </form>
+          <p class="field-hint" id="avail-status" role="status" aria-live="polite">Client-only stub. Nothing is posted to a server.</p>
+          <div id="avail-empty" class="callout hidden" style="margin-top:1rem">
+            <p><strong>Preview: live availability not connected.</strong></p>
+            <p>We do not invent providers for this ZIP. Browse the national provider directory or check back when coverage data is live.</p>
+            <p style="margin-top:0.75rem"><a class="btn btn-secondary" href="/providers/" data-cta-id="browse_providers" data-cta-location="avail_empty" data-availability-action="browse_providers_from_empty">Browse providers</a></p>
+          </div>
+          <p class="hero-note" style="margin-top:0.85rem">
+            Compensation may apply when relationships exist. This preview has none.
+            <a href="/disclosure/">Disclosure</a>
+          </p>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section" id="how-it-works">
+      <div class="section-inner">
+        <h2>How PickYourISP works</h2>
+        <p class="section-lead">
+          A short path from address check to comparing options. Preview and scaffolding may show PLACEHOLDER content.
+          Live lead capture stays OFF until Quality Trust gates clear.
+        </p>
+        <div class="steps steps-4">
+          <article class="step">
+            <div class="step-num" aria-hidden="true">1</div>
+            <h3>Enter your address or ZIP</h3>
+            <p>Use the availability tool on this page. Address and ZIP are form inputs, not special URLs.</p>
+          </article>
+          <article class="step">
+            <div class="step-num" aria-hidden="true">2</div>
+            <h3>See options when data exists</h3>
+            <p>When coverage data is available, we show sourced options. If incomplete, you get an honest empty state, not invented results.</p>
+          </article>
+          <article class="step">
+            <div class="step-num" aria-hidden="true">3</div>
+            <h3>Compare and learn</h3>
+            <p>Browse provider pages and (when published) tech and guide pages. Claims stay sourced or labeled PLACEHOLDER / UNKNOWN.</p>
+          </article>
+          <article class="step">
+            <div class="step-num" aria-hidden="true">4</div>
+            <h3>Connect later when live</h3>
+            <p>When buyer, consent, storage, and delivery are ready, you may request contact. Today: live lead capture is OFF.</p>
+          </article>
+        </div>
+        <p class="section-lead" style="margin-top:1.25rem;margin-bottom:0">
+          This site is in preview. Some modules are PLACEHOLDER until Research and Quality Trust clear them.
+          <a href="/#availability" data-cta-id="check_availability" data-cta-location="home_body">Check your address</a> ·
+          <a href="/disclosure/">Disclosure</a> ·
+          <a href="/methodology/">Methodology</a>
+        </p>
+      </div>
+    </section>
+
+    <section class="section" style="padding-top:0">
+      <div class="section-inner">
+        <h2>Explore providers</h2>
+        <p class="section-lead">
+          National ISP profiles from the approved PYI-014 publish list. Pages are PLACEHOLDER stubs until Research verifies facts.
+          These are not "available near you" results.
+        </p>
+        <p><a class="btn btn-primary" href="/providers/" data-cta-id="browse_providers" data-cta-location="home_body">Browse all 14 providers</a>
+           <a class="btn btn-ghost" href="/methodology/" data-cta-id="methodology" data-cta-location="home_body">Methodology</a>
+           <a class="btn btn-ghost" href="/disclosure/" data-cta-id="disclosure" data-cta-location="home_body">Disclosure</a></p>
+      </div>
+    </section>
+
+    <section class="section" style="padding-top:0">
+      <div class="section-inner">
+        <div class="cta-band">
+          <div>
+            <h2>Locations coming later</h2>
+            <p>City and state pages ship when Research coverage and minimum content criteria are met. No invented city inventory.</p>
+          </div>
+          <a class="btn btn-primary" href="/#availability" data-cta-id="check_availability" data-cta-location="cta_band">Check availability</a>
+        </div>
+      </div>
+    </section>
+  </main>
+  <script src="js/availability.js"></script>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-brand">PickYourISP</div>
+      <nav class="footer-nav" aria-label="Footer">
+        <a href="/internet/">Internet</a>
+        <a href="/methodology/" data-cta-id="methodology" data-cta-location="footer">Methodology</a>
+        <a href="/disclosure/" data-cta-id="disclosure" data-cta-location="footer">Disclosure</a>
+        <a href="/about/">About</a>
+        <a href="/privacy/">Privacy</a>
+        <a href="/terms/">Terms</a>
+        <a href="/contact/">Contact</a>
+      </nav>
+      <div class="disclosure">
+        <p>
+          <strong>Compensation disclosure:</strong>
+          PickYourISP may later earn compensation from providers or partners when you request contact or take service, once relationships exist.
+          This preview has no active paid provider relationships. See <a href="/disclosure/">full disclosure</a>.
+        </p>
+        <p>
+          <strong>Accuracy:</strong>
+          Speeds, prices, coverage, and availability are PLACEHOLDER / EXAMPLE or labeled UNKNOWN until Research verifies them.
+          Always verify with the provider. See <a href="/methodology/">methodology</a>.
+        </p>
+        <p>
+          <strong>Not a carrier:</strong>
+          PickYourISP is a comparison / lead-service product name, not an internet service provider.
+        </p>
+        <p>
+          <strong>Privacy:</strong>
+          This static preview does not collect personal information. Live lead capture is OFF.
+          <a href="/privacy/">Privacy</a> · <a href="/terms/">Terms</a>
+        </p>
+      </div>
+      <div class="footer-meta">
+        <span>&copy; 2026 PickYourISP · Static preview (PYI-015)</span>
+        <span><a href="/disclosure/">Disclosure</a> · <a href="/">Home</a></span>
+      </div>
+    </div>
+  </footer>
+  <script src="/js/analytics.js"></script>
+</body>
+</html>
