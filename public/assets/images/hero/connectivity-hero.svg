@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" fill="none">
+  <!-- Background gradient -->
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f0f9ff;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#e0f2fe;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="nodeGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0c4a6e;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0d9488;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <rect width="800" height="600" fill="url(#bgGrad)"/>
+  
+  <!-- Network nodes and connections -->
+  <!-- Central hub -->
+  <circle cx="400" cy="300" r="60" fill="url(#nodeGrad)" opacity="0.95"/>
+  <circle cx="400" cy="300" r="45" fill="white" opacity="0.3"/>
+  <circle cx="400" cy="300" r="30" fill="white" opacity="0.5"/>
+  
+  <!-- Connection lines -->
+  <line x1="400" y1="300" x2="250" y2="180" stroke="#0c4a6e" stroke-width="3" opacity="0.3"/>
+  <line x1="400" y1="300" x2="550" y2="180" stroke="#0c4a6e" stroke-width="3" opacity="0.3"/>
+  <line x1="400" y1="300" x2="200" y2="400" stroke="#0c4a6e" stroke-width="3" opacity="0.3"/>
+  <line x1="400" y1="300" x2="600" y2="400" stroke="#0c4a6e" stroke-width="3" opacity="0.3"/>
+  <line x1="400" y1="300" x2="400" y2="120" stroke="#0c4a6e" stroke-width="3" opacity="0.3"/>
+  
+  <!-- Outer nodes -->
+  <circle cx="250" cy="180" r="35" fill="#0d9488" opacity="0.85"/>
+  <circle cx="250" cy="180" r="20" fill="white" opacity="0.4"/>
+  
+  <circle cx="550" cy="180" r="35" fill="#0d9488" opacity="0.85"/>
+  <circle cx="550" cy="180" r="20" fill="white" opacity="0.4"/>
+  
+  <circle cx="200" cy="400" r="35" fill="#0d9488" opacity="0.85"/>
+  <circle cx="200" cy="400" r="20" fill="white" opacity="0.4"/>
+  
+  <circle cx="600" cy="400" r="35" fill="#0d9488" opacity="0.85"/>
+  <circle cx="600" cy="400" r="20" fill="white" opacity="0.4"/>
+  
+  <circle cx="400" cy="120" r="35" fill="#0d9488" opacity="0.85"/>
+  <circle cx="400" cy="120" r="20" fill="white" opacity="0.4"/>
+  
+  <!-- Small connecting nodes -->
+  <circle cx="320" cy="230" r="12" fill="#0c4a6e" opacity="0.5"/>
+  <circle cx="480" cy="230" r="12" fill="#0c4a6e" opacity="0.5"/>
+  <circle cx="290" cy="350" r="12" fill="#0c4a6e" opacity="0.5"/>
+  <circle cx="510" cy="350" r="12" fill="#0c4a6e" opacity="0.5"/>
+  
+  <!-- Signal waves -->
+  <path d="M 370 280 Q 380 270 390 280" stroke="#0d9488" stroke-width="2" fill="none" opacity="0.6"/>
+  <path d="M 360 265 Q 380 245 400 265" stroke="#0d9488" stroke-width="2" fill="none" opacity="0.4"/>
+  <path d="M 410 280 Q 420 270 430 280" stroke="#0d9488" stroke-width="2" fill="none" opacity="0.6"/>
+  <path d="M 400 265 Q 420 245 440 265" stroke="#0d9488" stroke-width="2" fill="none" opacity="0.4"/>
+  
+  <!-- Decorative elements -->
+  <circle cx="120" cy="150" r="8" fill="#0d9488" opacity="0.3"/>
+  <circle cx="680" cy="450" r="8" fill="#0d9488" opacity="0.3"/>
+  <circle cx="150" cy="500" r="6" fill="#0c4a6e" opacity="0.2"/>
+  <circle cx="700" cy="150" r="6" fill="#0c4a6e" opacity="0.2"/>
+  
+  <!-- Data flow indicators -->
+  <circle cx="325" cy="240" r="4" fill="#0c4a6e" opacity="0.8">
+    <animate attributeName="opacity" values="0.8;0.2;0.8" dur="2s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="475" cy="240" r="4" fill="#0c4a6e" opacity="0.8">
+    <animate attributeName="opacity" values="0.2;0.8;0.2" dur="2s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="300" cy="350" r="4" fill="#0d9488" opacity="0.8">
+    <animate attributeName="opacity" values="0.8;0.2;0.8" dur="1.5s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="500" cy="350" r="4" fill="#0d9488" opacity="0.8">
+    <animate attributeName="opacity" values="0.2;0.8;0.2" dur="1.5s" repeatCount="indefinite"/>
+  </circle>
+</svg>

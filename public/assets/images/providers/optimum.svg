@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 80" fill="none">
+  <rect width="200" height="80" fill="white"/>
+  <circle cx="35" cy="40" r="20" stroke="#00AEEF" stroke-width="4" fill="none"/>
+  <text x="65" y="52" font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="#000000">Optimum</text>
+</svg>

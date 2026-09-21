@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 80" fill="none">
+  <rect width="200" height="80" fill="white"/>
+  <path d="M20 30 Q30 25 40 30 T60 30" stroke="#0061A0" stroke-width="4" fill="none"/>
+  <path d="M20 45 Q30 40 40 45 T60 45" stroke="#00A3E0" stroke-width="4" fill="none"/>
+  <text x="70" y="52" font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="#000000">Spectrum</text>
+</svg>

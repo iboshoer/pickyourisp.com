@@ -1,0 +1,59 @@
+@import "tailwindcss";
+
+@layer theme {
+  :root {
+    --color-background: oklch(100% 0 0);
+    --color-foreground: oklch(13.2% 0.01 285.82);
+    --color-card: oklch(100% 0 0);
+    --color-card-foreground: oklch(13.2% 0.01 285.82);
+    --color-popover: oklch(100% 0 0);
+    --color-popover-foreground: oklch(13.2% 0.01 285.82);
+    --color-primary: oklch(50% 0.27 264.35);
+    --color-primary-foreground: oklch(98% 0 0);
+    --color-secondary: oklch(50% 0.14 194.77);
+    --color-secondary-foreground: oklch(13.2% 0.01 285.82);
+    --color-muted: oklch(96.1% 0.004 285.82);
+    --color-muted-foreground: oklch(56.9% 0.01 285.82);
+    --color-accent: oklch(96.1% 0.004 285.82);
+    --color-accent-foreground: oklch(13.2% 0.01 285.82);
+    --color-destructive: oklch(62.4% 0.22 29.23);
+    --color-destructive-foreground: oklch(98% 0 0);
+    --color-border: oklch(91.4% 0.01 285.82);
+    --color-input: oklch(91.4% 0.01 285.82);
+    --color-ring: oklch(50% 0.27 264.35);
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --color-background: oklch(13.2% 0.01 285.82);
+    --color-foreground: oklch(98% 0 0);
+    --color-card: oklch(13.2% 0.01 285.82);
+    --color-card-foreground: oklch(98% 0 0);
+    --color-popover: oklch(13.2% 0.01 285.82);
+    --color-popover-foreground: oklch(98% 0 0);
+    --color-primary: oklch(60% 0.27 264.35);
+    --color-primary-foreground: oklch(13.2% 0.01 285.82);
+    --color-secondary: oklch(55% 0.14 194.77);
+    --color-secondary-foreground: oklch(98% 0 0);
+    --color-muted: oklch(27.5% 0.02 285.82);
+    --color-muted-foreground: oklch(75.1% 0.01 285.82);
+    --color-accent: oklch(27.5% 0.02 285.82);
+    --color-accent-foreground: oklch(98% 0 0);
+    --color-destructive: oklch(40.6% 0.22 29.23);
+    --color-destructive-foreground: oklch(98% 0 0);
+    --color-border: oklch(27.5% 0.02 285.82);
+    --color-input: oklch(27.5% 0.02 285.82);
+    --color-ring: oklch(60% 0.27 264.35);
+  }
+}
+
+@layer base {
+  * {
+    border-color: var(--color-border);
+  }
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+}
