@@ -1,88 +1,177 @@
-# PickYourISP static preview (PYI-016)
+# PickYourISP
 
-Brand: **PickYourISP**  
-Purpose: Align the static shell to PYI-012 P0 and P1 routes using accepted PYI-013 briefs and the PYI-014 national ISP list.
+A US internet comparison and availability platform built with Next.js, TypeScript, Tailwind CSS, and shadcn/ui.
 
-Static HTML/CSS/JS only. No backend. No build step. Not a git repo.
+## Stack
 
-## How to open
+- **Next.js 16** (App Router)
+- **TypeScript**
+- **Tailwind CSS v4**
+- **shadcn/ui** with free blocks from [shadcnblocks.com](https://www.shadcnblocks.com/)
+- React 19
 
-From this `site/` directory:
+## Setup
+
+### Prerequisites
+
+- Node.js 18+ (developed with Node.js 22)
+- npm 9+
+
+### Installation
 
 ```bash
-cd /path/to/pickyourisp/site
-python3 -m http.server 8080
+npm install
 ```
 
-Then open:
+### Development
 
-- http://127.0.0.1:8080/
-- http://127.0.0.1:8080/providers/
-- http://127.0.0.1:8080/internet/
-- http://127.0.0.1:8080/internet/fiber/
-- http://127.0.0.1:8080/providers/xfinity/
-- http://127.0.0.1:8080/disclosure/
+```bash
+npm run dev
+```
 
-Folder `index.html` routing gives clean paths under `python3 -m http.server`.
+Open [http://localhost:3000](http://localhost:3000) with your browser.
 
-## URL map (files to paths)
+### Build
 
-| Path | File |
-|------|------|
-| `/` | `index.html` |
-| `/disclosure/` | `disclosure/index.html` |
-| `/methodology/` | `methodology/index.html` |
-| `/privacy/` | `privacy/index.html` |
-| `/terms/` | `terms/index.html` |
-| `/about/` | `about/index.html` |
-| `/contact/` | `contact/index.html` |
-| `/compare/` | `compare/index.html` (P3 stub; no invented results) |
-| `/providers/` | `providers/index.html` (14 PYI-014 slugs) |
-| `/internet/` | `internet/index.html` (technology hub) |
-| `/internet/{tech}/` | `internet/{tech}/index.html` (fiber, cable, DSL, satellite, fixed wireless, 5G home) |
-| `/providers/{slug}/` | `providers/{slug}/index.html` |
-| `/locations/ca/los-angeles/` | `locations/ca/los-angeles/index.html` (do-not-publish; noindex) |
-| `/robots.txt` | `robots.txt` |
-| `/sitemap.xml` | `sitemap.xml` |
-| Soft 404 | `404.html` (links to `/`, `/providers/`, `/disclosure/`) |
+```bash
+npm run build
+```
 
-Shared assets: `css/styles.css`, `js/availability.js` (honest empty stub), `js/compare.js` (retired stub).
+### Production
 
-## Nav (every page)
+```bash
+npm start
+```
 
-**Primary:** Check availability (`/#availability`) · Providers · Internet · Compare · About  
+## Project Structure
 
-**Footer:** Internet · Methodology · Disclosure · About · Privacy · Terms · Contact  
+```
+├── app/                    # Next.js App Router pages
+│   ├── providers/         # Provider listings and detail pages
+│   ├── internet/          # Internet technology guides
+│   ├── about/             # About page
+│   ├── disclosure/        # Disclosure page
+│   ├── methodology/       # Methodology page
+│   ├── privacy/           # Privacy policy
+│   ├── terms/             # Terms of service
+│   ├── contact/           # Contact page
+│   └── compare/           # Comparison tool (placeholder)
+├── components/
+│   ├── layout/            # Layout components (Header, Footer, etc.)
+│   └── ui/                # shadcn/ui components
+├── lib/                   # Utility functions
+└── public/                # Static assets
+```
 
-Preview banner on all pages.
+## shadcn/ui Free Blocks
 
-## What is NOT live
+This project uses **FREE** blocks from shadcnblocks.com. The registry is configured in `components.json`:
 
-- No backend, API, or coverage database
-- Availability ZIP submit shows **Preview: live availability not connected** and does **not** invent providers for that ZIP
-- No live inventory, real prices, or address-level coverage claims
-- No live PII / lead capture (privacy@TBD / support@TBD placeholders only)
-- No affiliate click tracking or partner relationships claimed
-- Provider pages are PLACEHOLDER; Xfinity is the fuller template; others are thin stubs with official-site links from PYI-014
-- Los Angeles city page is scaffold only: meta robots noindex + do-not-publish banner; excluded from sitemap Allow and listed in robots Disallow
-- Speeds, prices, coverage, reviews marked PLACEHOLDER / EXAMPLE / UNKNOWN
+```json
+{
+  "registries": {
+    "@shadcnblocks": "https://www.shadcnblocks.com/r/{name}"
+  }
+}
+```
 
-## Acceptance (PYI-016)
+No Pro API key is required. To add free blocks:
 
-- [x] P0 paths exist as folder/index.html routes
-- [x] Providers hub lists exactly the 14 approved PYI-014 slugs
-- [x] Xfinity page from brief 04 PLACEHOLDER
-- [x] Optional LA scaffold marked do-not-publish
-- [x] No live PII forms
-- [x] Briefs reflected without copying competitor content
-- [x] Old flat `disclosures.html` / fictional EXAMPLE hub providers removed
-- [x] Internet hub and six PLACEHOLDER technology explainer routes added
-- [x] Primary navigation includes Internet on every page
+```bash
+npx shadcn@latest add @shadcnblocks/<block-id>
+```
 
-## Traceability
+### Installed Components
 
-PYI-012 IA, PYI-013 briefs 01–05, PYI-014 national ISP list, DEFAULTS.md
+- `button` - Button component from shadcn/ui
+- `card` - Card component from shadcn/ui
+- `input` - Input component from shadcn/ui
 
-## Analytics
+Additional free blocks can be added as needed for features like hero sections, navigation, footers, CTAs, etc.
 
-Phase A uses `js/analytics.js`, a first-party event stub that logs allowlisted events with `console.debug` in preview. It makes no network calls, and `?analytics=off` disables the preview sink. ZIP values and other PII are never included; availability events may include only `zip_valid`.
+## Content Guidelines (HARD REQUIREMENTS)
+
+### Soft Launch Mode
+
+All pages emit `<meta name="robots" content="noindex, nofollow">` via Next.js Metadata API. This is enforced site-wide in the layout.
+
+### No Invented Data
+
+- **No fake prices, coverage, reviews, awards, or traffic data**
+- **No "As featured in" with fake media outlets**
+- Honest copy like "Built for consumer trust" with methodology and disclosure
+- PLACEHOLDER labels for unverified content
+- Press mentions note: "Press mentions will appear here when earned"
+
+### Provider Content
+
+- Keep factual information from existing HTML
+- Use PLACEHOLDER badges where data is unverified
+- Preserve links to official provider sites
+- No invented technical specifications or coverage claims
+
+### Lead Capture
+
+- Live lead capture stays OFF
+- ZIP form is client-only stub (no server POST)
+- Clear messaging about preview status
+
+## Routes
+
+The following routes are implemented:
+
+- `/` - Homepage with availability check
+- `/providers` - Provider directory (14 providers)
+- `/providers/[slug]` - Individual provider pages
+- `/internet` - Internet technology guide
+- `/compare` - Comparison tool placeholder
+- `/about` - About page
+- `/methodology` - Methodology page
+- `/disclosure` - Disclosure page
+- `/privacy` - Privacy policy
+- `/terms` - Terms of service
+- `/contact` - Contact page
+
+## Deployment (Vercel)
+
+### Settings
+
+- **Framework Preset:** Next.js
+- **Root Directory:** `.` (repository root)
+- **Build Command:** `npm run build` (default)
+- **Output Directory:** `.next` (default)
+- **Install Command:** `npm install` (default)
+
+The site will automatically build and deploy on push to the main branch once this PR is merged.
+
+## Design System
+
+### Colors (Brand)
+
+- **Primary:** Deep blue (`hsl(210 100% 40%)`)
+- **Secondary:** Teal (`hsl(174 63% 40%)`)
+- Professional, enterprise marketing feel
+
+### Typography
+
+- **Headings:** Plus Jakarta Sans (bold, 700/800)
+- **Body:** Inter (400/600)
+
+## Legacy Content
+
+The original static HTML files have been moved to the `legacy/` directory for reference. The new Next.js application is the primary codebase.
+
+## Development Notes
+
+- All pages use the `SiteLayout` component for consistent header, footer, and preview banner
+- Metadata is configured per-page with noindex robots meta
+- Components follow shadcn/ui patterns and conventions
+- No external state management - using React Server Components where possible
+
+## License
+
+Proprietary - All rights reserved
+
+## Contact
+
+See the [Contact page](/contact) for support and inquiries.
