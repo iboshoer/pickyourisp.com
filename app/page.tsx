@@ -232,6 +232,9 @@ export default function Home() {
             <Link href="/providers">Browse all 14 providers</Link>
           </Button>
           <Button asChild variant="outline" size="lg">
+            <Link href="/internet">Internet technologies</Link>
+          </Button>
+          <Button asChild variant="outline" size="lg">
             <Link href="/methodology">Methodology</Link>
           </Button>
           <Button asChild variant="outline" size="lg">

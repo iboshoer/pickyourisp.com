@@ -66,9 +66,12 @@ export default function ProvidersPage() {
           ))}
         </div>
 
-        <div className="mt-8">
+        <div className="mt-8 flex flex-wrap gap-4">
           <Button asChild size="lg">
             <Link href="/#availability-tool">Check availability</Link>
+          </Button>
+          <Button asChild variant="outline" size="lg">
+            <Link href="/internet">Internet technologies</Link>
           </Button>
         </div>
       </section>
