@@ -8,73 +8,110 @@ import { SiteLayout } from "@/components/layout/site-layout";
 const providers = {
   "xfinity": {
     name: "Xfinity",
+    displayName: "Xfinity internet",
     tagline: "Cable and fiber internet from Comcast",
     officialUrl: "https://www.xfinity.com/",
+    technologies: [{ name: "Cable", slug: "cable" }],
   },
   "spectrum": {
     name: "Spectrum",
+    displayName: "Spectrum internet",
     tagline: "Cable internet service from Charter Communications",
     officialUrl: "https://www.spectrum.com/",
+    technologies: [{ name: "Cable", slug: "cable" }],
   },
   "cox": {
     name: "Cox",
+    displayName: "Cox internet",
     tagline: "Cable internet provider serving select markets",
     officialUrl: "https://www.cox.com/",
+    technologies: [{ name: "Cable", slug: "cable" }],
   },
   "verizon": {
     name: "Verizon Home Internet",
+    displayName: "Verizon Home Internet",
     tagline: "Fiber and 5G home internet options",
     officialUrl: "https://www.verizon.com/",
+    technologies: [
+      { name: "Fiber", slug: "fiber" },
+      { name: "5G home", slug: "5g-home" },
+    ],
   },
   "att": {
     name: "AT&T Internet",
+    displayName: "AT&T Internet",
     tagline: "Fiber and fixed wireless internet services",
     officialUrl: "https://www.att.com/",
+    technologies: [
+      { name: "Fiber", slug: "fiber" },
+      { name: "Fixed wireless", slug: "fixed-wireless" },
+    ],
   },
   "t-mobile-home-internet": {
     name: "T-Mobile Home Internet",
+    displayName: "T-Mobile Home Internet",
     tagline: "5G and 4G LTE home internet",
     officialUrl: "https://www.t-mobile.com/home-internet",
+    technologies: [{ name: "5G home", slug: "5g-home" }],
   },
   "frontier": {
     name: "Frontier",
+    displayName: "Frontier internet",
     tagline: "Fiber internet provider",
     officialUrl: "https://frontier.com/",
+    technologies: [{ name: "Fiber", slug: "fiber" }],
   },
   "quantum-fiber": {
     name: "Quantum Fiber",
+    displayName: "Quantum Fiber",
     tagline: "Fiber internet from Lumen",
     officialUrl: "https://www.quantumfiber.com/",
+    technologies: [{ name: "Fiber", slug: "fiber" }],
   },
   "optimum": {
     name: "Optimum",
+    displayName: "Optimum internet",
     tagline: "Cable and fiber internet services",
     officialUrl: "https://www.optimum.com/",
+    technologies: [{ name: "Cable", slug: "cable" }],
   },
   "google-fiber": {
     name: "Google Fiber",
+    displayName: "Google Fiber",
     tagline: "Fiber internet in select cities",
     officialUrl: "https://fiber.google.com/",
+    technologies: [{ name: "Fiber", slug: "fiber" }],
   },
   "brightspeed": {
     name: "Brightspeed",
+    displayName: "Brightspeed internet",
     tagline: "Fiber and DSL internet provider",
     officialUrl: "https://www.brightspeed.com/",
+    technologies: [
+      { name: "Fiber", slug: "fiber" },
+      { name: "DSL", slug: "dsl" },
+    ],
   },
   "kinetic": {
     name: "Kinetic",
+    displayName: "Kinetic internet",
     tagline: "Fiber internet from Windstream",
     officialUrl: "https://www.gokinetic.com/",
+    technologies: [{ name: "Fiber", slug: "fiber" }],
   },
   "starlink": {
     name: "Starlink",
+    displayName: "Starlink internet",
     tagline: "Satellite internet from SpaceX",
     officialUrl: "https://www.starlink.com/",
+    technologies: [{ name: "Satellite", slug: "satellite" }],
   },
   "hughesnet": {
     name: "HughesNet",
+    displayName: "HughesNet internet",
     tagline: "Satellite internet service",
     officialUrl: "https://www.hughesnet.com/",
+    technologies: [{ name: "Satellite", slug: "satellite" }],
   },
 };
 
@@ -102,7 +139,7 @@ export async function generateMetadata({
   }
 
   return {
-    title: `${provider.name} · PickYourISP`,
+    title: `${provider.displayName} · PickYourISP`,
     description: `${provider.tagline}. PLACEHOLDER profile until Research verifies facts.`,
     robots: {
       index: false,
@@ -131,7 +168,7 @@ export default async function ProviderPage({
             PLACEHOLDER
           </div>
           <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl mb-4">
-            {provider.name}
+            {provider.displayName}
           </h1>
           <p className="text-xl text-muted-foreground max-w-[700px]">{provider.tagline}</p>
         </div>
@@ -155,10 +192,16 @@ export default async function ProviderPage({
 
               <div>
                 <h3 className="font-semibold mb-2">Technology</h3>
-                <p className="text-sm text-muted-foreground">
-                  Technology details are PLACEHOLDER. Visit the provider&apos;s website for current
-                  offerings.
+                <p className="text-sm text-muted-foreground mb-2">
+                  {provider.name} offers the following internet technologies:
                 </p>
+                <div className="flex flex-wrap gap-2">
+                  {provider.technologies.map((tech) => (
+                    <Button key={tech.slug} asChild variant="secondary" size="sm">
+                      <Link href={`/internet/${tech.slug}`}>{tech.name}</Link>
+                    </Button>
+                  ))}
+                </div>
               </div>
 
               <div>

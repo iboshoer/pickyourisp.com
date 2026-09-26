@@ -11,7 +11,7 @@ export function Header() {
           <span>PickYourISP</span>
         </Link>
         <nav className="flex items-center space-x-6 ml-auto text-sm font-medium">
-          <Link href="/#availability" className="transition-colors hover:text-primary">
+          <Link href="/#availability-tool" className="transition-colors hover:text-primary">
             Check availability
           </Link>
           <Link href="/providers" className="transition-colors hover:text-primary">

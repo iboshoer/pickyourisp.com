@@ -5,7 +5,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { SiteLayout } from "@/components/layout/site-layout";
 
 export const metadata: Metadata = {
-  title: "Internet Technology Guide · PickYourISP",
+  title: "Internet technologies · PickYourISP",
   description: "Learn about different types of internet technology: fiber, cable, DSL, satellite, fixed wireless, and 5G home.",
   robots: {
     index: false,
@@ -52,7 +52,7 @@ export default function InternetPage() {
       <section className="container py-12 md:py-24">
         <div className="mb-12 space-y-4">
           <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl">
-            Internet Technology Guide
+            Internet technologies
           </h1>
           <p className="max-w-[700px] text-muted-foreground md:text-xl">
             Understanding different types of internet technology can help you choose the best option
@@ -90,13 +90,27 @@ export default function InternetPage() {
           ))}
         </div>
 
-        <div className="mt-12 text-center">
+        <div className="mt-12 text-center space-y-4">
           <p className="text-muted-foreground mb-4">
             Want to see what&apos;s available at your address?
           </p>
-          <Button asChild size="lg">
-            <Link href="/#availability-tool">Check availability</Link>
-          </Button>
+          <div className="flex flex-wrap gap-4 justify-center">
+            <Button asChild size="lg">
+              <Link href="/#availability-tool">Check availability</Link>
+            </Button>
+            <Button asChild variant="outline" size="lg">
+              <Link href="/providers">Browse providers</Link>
+            </Button>
+          </div>
+          <p className="text-sm text-muted-foreground mt-6">
+            <Link href="/disclosure" className="underline">
+              Disclosure
+            </Link>
+            {" · "}
+            <Link href="/methodology" className="underline">
+              Methodology
+            </Link>
+          </p>
         </div>
       </section>
     </SiteLayout>
